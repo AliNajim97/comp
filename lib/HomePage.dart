@@ -20,8 +20,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Expanded(
           child: Container(
             width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 5, ),
-            margin: const EdgeInsets.symmetric(vertical: 35, ),
+            padding: const EdgeInsets.symmetric(vertical: 1, ),
+            margin: const EdgeInsets.symmetric(vertical: 25, ),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Theme.of(context).primaryColor,
@@ -36,8 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children:<Widget>[
                     SizedBox(
-                      height: 150,
-                      width: 150,
+                      height: 170,
+                      width: 170,
                       child: Image.asset('img/logo.png',fit: BoxFit.fill,),
                     ),
                     Column(
@@ -48,9 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         const Text("وزارة الكهرباء",
                           style: TextStyle(
-                              color:Colors.black,
                               fontFamily: 'cr',
-                              fontSize:22
+                              color: Colors.black,
+                              fontSize:20
                           ),
                         ),
                         const SizedBox(height: 10,),
@@ -58,15 +58,15 @@ class _MyHomePageState extends State<MyHomePage> {
                           style: TextStyle(
                               color:Colors.black,
                               fontFamily: 'cr',
-                              fontSize:16
+                              fontSize:18
                           ),
                         ),
-                        const SizedBox(height: 40,),
+                        const SizedBox(height: 50,),
                         const Text("قسم الشكاوى",
                           style: TextStyle(
-                              color:Colors.purple,
+                              color:Colors.indigo,
                               fontFamily: 'cr',
-                              fontSize:18
+                              fontSize:20
                           ),
                         ),
                         const SizedBox(height: 20,),
@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 SizedBox(height: 5,),
                                 Text("الاتصال بمركز الشكاوى",
                                   style: TextStyle(
-                                      color:Colors.black45,
+                                      color:Colors.greenAccent,
                                       fontFamily: 'cr',
                                       fontSize:12
                                   ),
@@ -121,13 +121,13 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Column(
                               children: const [
                                 Icon(Iconsax.edit,
-                                  color: Colors.black38,
+                                  color: Colors.cyan,
                                   size: 56,
                                 ),
                                 SizedBox(height: 5,),
                                 Text("تسجيل شكوى",
                                   style: TextStyle(
-                                      color:Colors.black45,
+                                      color:Colors.cyan,
                                       fontFamily: 'cr',
                                       fontSize:14
                                   ),
@@ -136,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             shape: const CircleBorder(),
                             borderSide: const BorderSide(
-                              color: Colors.greenAccent,
+                              color: Colors.cyan,
                               style: BorderStyle.solid,
                               width: 2,
                             ),

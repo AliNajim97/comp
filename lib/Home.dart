@@ -9,7 +9,12 @@ class MyPage extends StatefulWidget {
 }
 
 class _MyPageState extends State<MyPage> {
+  double get w => MediaQuery.of(context).size.width;
+  double get h => MediaQuery.of(context).size.height;
 
+  bool isOpened = false;
+  bool menuOpen = true;
+  bool textCtrl = false;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +22,7 @@ class _MyPageState extends State<MyPage> {
         backgroundColor: Colors.white,
         // appBar: AppBar(title: const Text("الشكاوى"),),
         body: Container(
-          width: double.infinity,
+          width: w,
           decoration: const BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.center,
@@ -30,7 +35,6 @@ class _MyPageState extends State<MyPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-
               Expanded(
                   child: Container(
                       width: double.infinity,
@@ -49,7 +53,7 @@ class _MyPageState extends State<MyPage> {
                           children: <Widget>[
                             const Text("قسم الشكاوى",
                               style: TextStyle(
-                                  color:Colors.purple,
+                                  color:Colors.indigo,
                                   fontFamily: 'cr',
                                   fontSize:18
                               ),
@@ -63,7 +67,7 @@ class _MyPageState extends State<MyPage> {
                                 decoration: InputDecoration(
                                   hintText: 'ادخل اسمك',
                                   hintStyle: const TextStyle(
-                                      color: Colors.lightBlue,
+                                      color: Colors.black45,
                                       fontFamily: 'cr',
                                       fontSize: 14
                                   ),
@@ -88,7 +92,7 @@ class _MyPageState extends State<MyPage> {
                                 decoration: InputDecoration(
                                   hintText: 'رقم الهاتف',
                                   hintStyle: const TextStyle(
-                                      color: Colors.lightBlue,
+                                      color: Colors.black45,
                                       fontFamily: 'cr',
                                       fontSize: 14
                                   ),
@@ -112,7 +116,7 @@ class _MyPageState extends State<MyPage> {
                                 decoration: InputDecoration(
                                   hintText: 'رقم المحولة',
                                   hintStyle: const TextStyle(
-                                      color: Colors.lightBlue,
+                                      color: Colors.black45,
                                       fontFamily: 'cr',
                                       fontSize: 14
                                   ),
@@ -135,7 +139,7 @@ class _MyPageState extends State<MyPage> {
                                 decoration: InputDecoration(
                                   hintText: 'العنوان',
                                   hintStyle: const TextStyle(
-                                      color: Colors.lightBlue,
+                                      color: Colors.black45,
                                       fontFamily: 'cr',
                                       fontSize: 14
                                   ),
@@ -158,7 +162,7 @@ class _MyPageState extends State<MyPage> {
                                 decoration: InputDecoration(
                                   hintText: 'اقرب نقطة دالة',
                                   hintStyle: const TextStyle(
-                                      color: Colors.lightBlueAccent,
+                                      color: Colors.black45,
                                       fontFamily: 'cr',
                                       fontSize: 14
                                   ),
@@ -181,7 +185,7 @@ class _MyPageState extends State<MyPage> {
                                 decoration: InputDecoration(
                                   hintText: 'من فضلك اكتب طلبك',
                                   hintStyle: const TextStyle(
-                                      color: Colors.lightBlueAccent,
+                                      color: Colors.black45,
                                       fontFamily: 'cr',
                                       fontSize: 14
                                   ),
@@ -289,9 +293,9 @@ class _MyPageState extends State<MyPage> {
                                     ),
                                   );
                                 },
-                                textColor: Colors.purple,
+                                textColor: Colors.indigo,
                                 highlightedBorderColor: Colors.red,
-                                splashColor: Colors.blueAccent,
+                                splashColor: Colors.indigo,
                                 borderSide: const BorderSide(
                                   color: Colors.purple,
                                 ),
@@ -303,7 +307,7 @@ class _MyPageState extends State<MyPage> {
                                 label: const Text(
                                   'ارسال',
                                   style: TextStyle(
-                                      color:Colors.purple,
+                                      color:Colors.indigo,
                                       fontFamily: 'cr',
                                       fontSize:14
                                   ),
@@ -320,7 +324,7 @@ class _MyPageState extends State<MyPage> {
                             const Text(
                               'هل لديك مشكلة في تسجيل شكوى ؟',
                               style: TextStyle(
-                                  color: Colors.blue,
+                                  color: Colors.black,
                                   fontFamily: 'cr',
                                   fontSize:8
                               ),
@@ -337,9 +341,6 @@ class _MyPageState extends State<MyPage> {
 
 
                       ))),
-
-
-
             ],
           ),
 

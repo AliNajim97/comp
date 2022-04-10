@@ -53,7 +53,7 @@ class _SmartScreenState extends State<SmartScreen>
           SafeArea(
               child: Container(
                 width: 200,
-                padding: const EdgeInsets.only(top: 25,bottom: 10,left: 18,right: 18),
+                padding: const EdgeInsets.only(top: 15,bottom: 10,left: 5,right: 5),
                 child: Column(
                   children: [
                     const SizedBox(height: 15),
@@ -62,7 +62,7 @@ class _SmartScreenState extends State<SmartScreen>
                       width: 170,
                       child: Image.asset('img/logo.png',fit: BoxFit.fill,),
                     ),
-                    const SizedBox(height: 15),
+                    const SizedBox(height: 5),
                     const Text("وزارة الكهرباء",
                       style: TextStyle(
                           color:Colors.white,
@@ -70,16 +70,27 @@ class _SmartScreenState extends State<SmartScreen>
                           fontSize:20
                       ),
                     ),
-                    const SizedBox(height: 2),
 
-                    const SizedBox(height: 50),
+
+                    const SizedBox(height: 70),
                     Expanded(
                         child: ListView(
                           children: [
                             ListTile(
                               onTap: (){},
                               leading: const Icon(Iconsax.home,color: Colors.white,size: 24),
-                              title: const Text('حول',textDirection: TextDirection.rtl,
+                              title: const Text('حول',textDirection: TextDirection.ltr,
+                                style: TextStyle(
+                                    color:Colors.white,
+                                    fontFamily: 'cr',
+                                    fontSize:16
+                                ),
+                              ),
+                            ),
+                            ListTile(
+                              onTap: (){},
+                              leading: const Icon(Iconsax.home,color: Colors.white,size: 24),
+                              title: const Text('مركز الدعم',textDirection: TextDirection.ltr,
                                 style: TextStyle(
                                     color:Colors.white,
                                     fontFamily: 'cr',
@@ -90,7 +101,7 @@ class _SmartScreenState extends State<SmartScreen>
                             ListTile(
                               onTap: (){},
                               leading: const Icon(Iconsax.setting, color: Colors.white,size: 24),
-                              title: const Text('الاعدادات',textDirection: TextDirection.rtl,
+                              title: const Text('الاعدادات',textDirection: TextDirection.ltr,
                                 style: TextStyle(
                                     color:Colors.white,
                                     fontFamily: 'cr',
@@ -101,7 +112,7 @@ class _SmartScreenState extends State<SmartScreen>
                             ListTile(
                               onTap: (){},
                               leading: const Icon(Iconsax.logout,color: Colors.white,size: 24),
-                              title: const Text('خروج ',textDirection: TextDirection.rtl,
+                              title: const Text('خروج ',textDirection: TextDirection.ltr,
                                 style: TextStyle(
                                     color:Colors.white,
                                     fontFamily: 'cr',
@@ -123,14 +134,14 @@ class _SmartScreenState extends State<SmartScreen>
                             style: TextStyle(
                                 color:Colors.white70,
                                 fontFamily: 'cr',
-                                fontSize:8
+                                fontSize:10
                             ),
                           ),
                           Text("فرع البصرة",
                             style: TextStyle(
                                 color:Colors.white70,
                                 fontFamily: 'cr',
-                                fontSize:8
+                                fontSize:10
                             ),
                           ),
                         ],

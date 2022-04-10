@@ -42,23 +42,32 @@ class _SecondScreenState extends State<SecondScreen> {
                   width: 250,
                   height: 250),
             ),
-            Row(
+            Column(
               children: const [
                  Text("وزارة الكهرباء",
                   style: TextStyle(
                       color:Colors.black,
                       fontFamily: 'cr',
-                      fontSize:30
+                      fontSize:22
                   ),
                 ),
-                 SizedBox(height: 10,),
+                 SizedBox(height: 10),
                  Text("المديرية العامة لتوزيع كهرباء الجنوب",
                   style: TextStyle(
-                      color:Colors.black,
+                    color: Colors.black,
                       fontFamily: 'cr',
-                      fontSize:16
+                      fontSize:18,
                   ),
                 ),
+                SizedBox(height: 60,),
+                // Text(" تطبيق الشكاوى",
+                //   style: TextStyle(
+                //       color:Colors.black,
+                //       fontFamily: 'cr',
+                //       fontSize:20
+                //   ),
+                // ),
+                SizedBox(height: 120),
               ],
             ),
             const Padding(padding: EdgeInsets.only(top: 50.0)),
