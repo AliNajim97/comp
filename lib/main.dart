@@ -1,6 +1,4 @@
-import 'package:emp1/Home.dart';
-import 'package:emp1/HomePage.dart';
-import 'package:emp1/SmartScreen.dart';
+import 'package:emp1/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -17,7 +15,7 @@ class MyApp extends StatelessWidget {
         canvasColor: Colors.grey[600],
         primaryColor: Colors.white,
       ),
-      home: const SmartScreen(),
+      home: const SecondScreen(),
     );
   }
 }

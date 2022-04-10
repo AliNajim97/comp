@@ -1,14 +1,10 @@
-
-
 import 'dart:math';
-
 import 'package:emp1/Home.dart';
 import 'package:emp1/HomePage.dart';
 import 'package:emp1/aboutme.dart';
 import 'package:emp1/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SmartScreen extends StatefulWidget {
@@ -23,11 +19,7 @@ class _SmartScreenState extends State<SmartScreen>
   static final GlobalKey<ScaffoldState> _scaffoldKey =
   GlobalKey<ScaffoldState>();
 
-  int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-  TextStyle(
-    fontSize: 24,color: Color(0xFF45413A),
-  );
+  final int _selectedIndex = 0;
   final _pageOptions =[
     const MyHomePage(),
     const MyApp(),

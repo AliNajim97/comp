@@ -1,7 +1,5 @@
-import 'package:emp1/FadeAnimation.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:simple_animations/simple_animations.dart';
 
 class MyPage extends StatefulWidget {
   const MyPage({key}) : super(key: key);
@@ -327,7 +325,7 @@ class _MyPageState extends State<MyPage> {
                                   fontSize:8
                               ),
                             ),
-                            const SizedBox(height: 60),
+                            const SizedBox(height: 10),
 
 
 

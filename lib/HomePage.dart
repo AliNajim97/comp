@@ -1,7 +1,4 @@
 import 'package:emp1/Home.dart';
-import 'package:emp1/aboutme.dart';
-import 'package:emp1/main.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -17,82 +14,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      endDrawer: Drawer(
-        backgroundColor: Colors.purple,
-        child: Container(
-          color: Colors.purple,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 20,bottom: 1,left: 0),
-            child: Column(
-              children: <Widget>[
-                Image.asset('img/logo.png',fit: BoxFit.cover,),
-                const SizedBox(height: 12),
-                Card(
-                  child: ListTile(title:
-                  const Text('حول',textDirection: TextDirection.rtl,
-                    style: TextStyle(
-                        color:Colors.black,
-                        fontFamily: 'cr',
-                        fontSize:18
-                    ),
-                  ),
-                    trailing: const Icon(Icons.info_outline,size: 20,color: Colors.black,),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const MyPage()),);},),
-                ),
-                const SizedBox(height: 12),
-                Card(
-                  child: ListTile(title:
-                  const Text('حول',textDirection: TextDirection.rtl,
-                    style: TextStyle(
-                        color:Colors.black,
-                        fontFamily: 'cr',
-                        fontSize:18
-                    ),
-                  ),
-                    trailing: const Icon(Icons.info_outline,size: 20,color: Colors.black,),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Story()),);},),
-                ),
-                const Card(
-                  child: ListTile(title:
-                  Text('عن التطبيق',textDirection: TextDirection.rtl,
-                    style: TextStyle(
-                        color:Colors.black,
-                        fontFamily: 'cr',
-                        fontSize:18
-                    ),
-                  ),
-                    trailing: Icon(Icons.touch_app,size: 20,color: Colors.black,),
 
-                    ),
-                ),
-                Card(
-                  child: ListTile(title:
-                  const Text('خروج',textDirection: TextDirection.rtl,
-                    style: TextStyle(
-                        color:Colors.black,
-                        fontFamily: 'cr',
-                        fontSize:18
-                    ),
-                  ),
-                    trailing: const Icon(Icons.exit_to_app,size: 20,color: Colors.black,),
-                    onTap: () {
-                      Navigator.pop(context);
-                    },),
-                ),
-              ],
-            ),
-          ),
-        ),
-        elevation: debugDefaultTargetPlatformOverride == TargetPlatform.iOS ? 0.5 : 0.0,
-      ),
       body: Padding(
         padding: const EdgeInsets.only(top: 25,left: 12,right: 12),
         child: Expanded(
@@ -118,14 +40,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 150,
                       child: Image.asset('img/logo.png',fit: BoxFit.fill,),
                     ),
-
                     Column(
                       children: [
                         const Align(
                           alignment: Alignment.center,
 
                         ),
-
                         const Text("وزارة الكهرباء",
                           style: TextStyle(
                               color:Colors.black,
@@ -150,7 +70,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         const SizedBox(height: 20,),
-
                         ButtonTheme(
                           minWidth: 165.0,
                           height: 165.0,
@@ -188,7 +107,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         const SizedBox(height: 20,),
-
                         ButtonTheme(
                           minWidth: 165.0,
                           height: 165.0,
@@ -224,14 +142,9 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                         ),
-
                       ],
                     ),
-
                     const SizedBox(height: 185),
-
-
-
                   ]
               ),
             ),
