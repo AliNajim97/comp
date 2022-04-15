@@ -304,18 +304,19 @@ class _MyPageState extends State<MyPage> {
                                   borderRadius: BorderRadius.circular(32.0),
 
                                 ),
+                                icon: const Icon(
+                                  Icons.send,textDirection: TextDirection.rtl,
+                                  size: 18.0,
+                                ),
                                 label: const Text(
-                                  'ارسال',
+                                  'ارسال',textDirection: TextDirection.rtl,
                                   style: TextStyle(
                                       color:Colors.indigo,
                                       fontFamily: 'cr',
                                       fontSize:14
                                   ),
                                 ),
-                                icon: const Icon(
-                                  Icons.send,
-                                  size: 18.0,
-                                ),
+
 
                               ),
                             ),

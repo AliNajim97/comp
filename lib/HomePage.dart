@@ -1,5 +1,6 @@
 import 'package:emp1/Home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:iconsax/iconsax.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -63,85 +64,146 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         const SizedBox(height: 50,),
                         const Text("قسم الشكاوى",
-                          style: TextStyle(
-                              color:Colors.indigo,
-                              fontFamily: 'cr',
-                              fontSize:20
-                          ),
-                        ),
+                             style: TextStyle(
+                                 color:Colors.indigo,
+                                 fontFamily: 'cr',
+                                 fontSize:20
+                             ),
+                           ),
                         const SizedBox(height: 20,),
-                        ButtonTheme(
-                          minWidth: 165.0,
-                          height: 165.0,
-                          // ignore: deprecated_member_use
-                          child: OutlineButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>   const MyHomePage()
-                                ),);
-                            },
+                        Container(
+                          width: 300,
+                          height: 840,
+                          child: Padding(
+                            padding: const EdgeInsets.all(62.0),
                             child: Column(
-                              children: const [
-                                Icon(Iconsax.call_calling,
-                                  color: Colors.greenAccent,
-                                  size: 56,
-                                ),
-                                SizedBox(height: 5,),
-                                Text("الاتصال بمركز الشكاوى",
-                                  style: TextStyle(
-                                      color:Colors.greenAccent,
-                                      fontFamily: 'cr',
-                                      fontSize:12
+                              children: <Widget>[
+                                ButtonTheme(
+                                  minWidth: 165.0,
+                                  height: 165.0,
+                                  // ignore: deprecated_member_use
+                                  child: OutlineButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => const MyPage()),);
+                                    },
+                                    child: Column(
+                                      children: const [
+                                        Icon(Iconsax.edit,
+                                          color: Colors.greenAccent,
+                                          size: 56,
+                                        ),
+                                        SizedBox(height: 5,),
+                                        Text("تسجيل شكوى",
+                                          style: TextStyle(
+                                              color:Colors.greenAccent,
+                                              fontFamily: 'cr',
+                                              fontSize:14
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    shape: const CircleBorder(),
+                                    borderSide: const BorderSide(
+                                      color: Colors.black26,
+                                      style: BorderStyle.solid,
+                                      width: 2,
+                                    ),
                                   ),
                                 ),
-                              ],
-                            ),
-                            shape: const CircleBorder(),
-                            borderSide: const BorderSide(
-                              color: Colors.greenAccent,
-                              style: BorderStyle.solid,
-                              width: 2,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 20,),
-                        ButtonTheme(
-                          minWidth: 165.0,
-                          height: 165.0,
-                          // ignore: deprecated_member_use
-                          child: OutlineButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const MyPage()),);
-                            },
-                            child: Column(
-                              children: const [
-                                Icon(Iconsax.edit,
-                                  color: Colors.cyan,
-                                  size: 56,
-                                ),
-                                SizedBox(height: 5,),
-                                Text("تسجيل شكوى",
-                                  style: TextStyle(
-                                      color:Colors.cyan,
-                                      fontFamily: 'cr',
-                                      fontSize:14
+                                ButtonTheme(
+                                  minWidth: 165.0,
+                                  height: 165.0,
+                                  // ignore: deprecated_member_use
+                                  child: OutlineButton(
+                                    onPressed: () async{
+                                      await FlutterPhoneDirectCaller.callNumber("159");
+                                    },
+                                    child: Column(
+                                      children: const [
+                                        Icon(Iconsax.call_calling,
+                                          color: Colors.indigo,
+                                          size: 56,
+                                        ),
+                                        SizedBox(height: 5,),
+                                        Text("الاتصال بمركز الشكاوى",
+                                          style: TextStyle(
+                                              color:Colors.indigo,
+                                              fontFamily: 'cr',
+                                              fontSize:12
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    shape: const CircleBorder(),
+                                    borderSide: const BorderSide(
+                                      color: Colors.black26,
+                                      style: BorderStyle.solid,
+                                      width: 2,
+                                    ),
                                   ),
                                 ),
+                                 Column(
+                                    children: const <Widget>[
+                                      Spacer(),
+                                      SizedBox(height: 24),
+                                      Text(
+                                        "Gateway",
+                                        style: TextStyle(
+                                          color: Colors.indigo,
+                                          fontSize: 28,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                      Spacer(),
+                                      Text(
+                                        "Online",
+                                        style: TextStyle(
+                                          color: Colors.grey,
+                                          fontSize: 20,
+                                        ),
+                                      ),
+                                      Spacer(),
+                                      Padding(
+                                        padding: EdgeInsets.symmetric(horizontal: 52),
+                                        child: Divider(
+                                          height: 2,
+                                          color: Colors.cyan,
+                                        ),
+                                      ),
+                                      Spacer(),
+                                      Text(
+                                        "Alarming",
+                                        style: TextStyle(
+                                          color: Colors.grey,
+                                          fontSize: 22,
+                                        ),
+                                      ),
+                                      Spacer(),
+
+                                      SizedBox(height: 24),
+                                      Spacer(),
+                                    ],
+                                  ),
                               ],
                             ),
-                            shape: const CircleBorder(),
-                            borderSide: const BorderSide(
-                              color: Colors.cyan,
-                              style: BorderStyle.solid,
-                              width: 2,
-                            ),
+                          ),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(24),
+                            color: Colors.white,
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.indigo,
+                                offset: Offset(8, 8),
+                                blurRadius: 12,
+                              ),
+                            ],
                           ),
                         ),
+
+
                       ],
                     ),
                     const SizedBox(height: 185),

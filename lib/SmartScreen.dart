@@ -67,10 +67,9 @@ class _SmartScreenState extends State<SmartScreen>
                       style: TextStyle(
                           color:Colors.white,
                           fontFamily: 'cr',
-                          fontSize:20
+                          fontSize:20,
                       ),
                     ),
-
 
                     const SizedBox(height: 70),
                     Expanded(
@@ -89,8 +88,19 @@ class _SmartScreenState extends State<SmartScreen>
                             ),
                             ListTile(
                               onTap: (){},
-                              leading: const Icon(Iconsax.home,color: Colors.white,size: 24),
+                              leading: const Icon(Iconsax.support,color: Colors.white,size: 24),
                               title: const Text('مركز الدعم',textDirection: TextDirection.ltr,
+                                style: TextStyle(
+                                    color:Colors.white,
+                                    fontFamily: 'cr',
+                                    fontSize:16
+                                ),
+                              ),
+                            ),
+                            ListTile(
+                              onTap: (){},
+                              leading: const Icon(Iconsax.notification,color: Colors.white,size: 24),
+                              title: const Text('الاشعارات',textDirection: TextDirection.ltr,
                                 style: TextStyle(
                                     color:Colors.white,
                                     fontFamily: 'cr',
@@ -124,7 +134,6 @@ class _SmartScreenState extends State<SmartScreen>
                           ],
                         )),
                     const SizedBox(height: 30),
-
 
                     Center(
                       child: Column(
